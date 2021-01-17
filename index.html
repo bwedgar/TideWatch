@@ -52,9 +52,10 @@
   
 success=(position)=>{
 coords = position.coords;
-        astromath.longitude = astromath.radians(coords.longitude); //longitude of observer in degrees East
-        astromath.latitude = astromath.radians(coords.latitude); //latitude of observer in degrees
-      alert(astromath.longitude)
+   alert(coords.longitude);
+       // astromath.longitude = astromath.radians(coords.longitude); //longitude of observer in degrees East
+      //  astromath.latitude = astromath.radians(coords.latitude); //latitude of observer in degrees
+    //  alert(astromath.longitude)
  }
 error=()=>{
 alert(“error”)
@@ -66,8 +67,8 @@ alert(“error”)
         
       })
     } else {
-      astromath.longitude = astromath.radians(174.76); //longitude of observer in Auckland in degrees East
-      astromath.latitude = astromath.radians(-36.8485); //latitude of observer  in Auckland  in degrees
+      //astromath.longitude = astromath.radians(174.76); //longitude of observer in Auckland in degrees East
+     // astromath.latitude = astromath.radians(-36.8485); //latitude of observer  in Auckland  in degrees
       alert(“no geolocation”)
     }
   }
