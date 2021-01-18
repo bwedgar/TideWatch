@@ -5,7 +5,7 @@
 
 <p>Click the button to get your coordinates.</p>
 
-<button onclick="getLocation()">3</button>
+<button onclick="getLocation()">73</button>
 
 <p id="demo"></p>
 
@@ -29,7 +29,7 @@ function showTide(position) {
   url="https://api.niwa.co.nz/tides/data?lat="+position.coords.latitude+"&long="+position.coords.longitude+"&datum=MSL&numberOfDays=2&apikey=afFMX6LgUIJ8axZZEVvmJVbOGo3gvtxa";
 
 fetch(url)
-  .then(response => response.json())
+  .then(response => response.text())
 .then(body => alert(JSON.parse(body)))
 }
 
