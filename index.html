@@ -30,7 +30,7 @@ function showTide(position) {
 
 fetch(url)
   .then(response => response.text())
-.then(body => alert(JSON.parse(body)))
+.then(body => alert(JSON.parse(body).time[1]))
 }
 
 </script>
