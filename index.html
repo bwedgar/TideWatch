@@ -24,6 +24,11 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
 }
+
+function showTide(position) {
+  url="https://api.niwa.co.nz/tides/data?lat="+position.coords.latitude+"&long="+position.coords.longitude+"&datum=MSL&numberOfDays=1&apikey=afFMX6LgUIJ8axZZEVvmJVbOGo3gvtxa";
+
+}
 </script>
 
 </body>
