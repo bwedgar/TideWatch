@@ -22,7 +22,7 @@
       background-color: black;
       color: red;
       font-family: verdana;
-      font-size: 3vw;
+      font-size: 6vw;
       border: 1px solid red;
       padding: 2% 2%;
       text-align: left;
@@ -45,7 +45,7 @@
 
 <body>
 
-  <button id="buttonTrainLeftFast" name="speed" class="button group7">click</button>
+  <button id="buttonTrainLeftFast" name="speed" class="button group7">click 2</button>
  
 </body>
  <script>
@@ -72,14 +72,11 @@ alert(“error”)
       alert(“no geolocation”)
     }
   }
-  getLocation()
+ 
       document.getElementById("buttonTrainLeftFast").addEventListener("click", () => {
-        for (e of document.getElementsByName("speed")) {
-          e.classList.remove("pressed")
-        }
-        document.getElementById("buttonTrainLeftFast").classList.add("pressed")
-        console.log("fast train")
-      })();
-    }
+        getLocation()
+}
+)
+    
   </script>
 </html>
