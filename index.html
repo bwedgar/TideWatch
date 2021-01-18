@@ -14,7 +14,7 @@ var x = document.getElementById("demo");
 
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(showTide);
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
@@ -27,6 +27,11 @@ function showPosition(position) {
 
 function showTide(position) {
   url="https://api.niwa.co.nz/tides/data?lat="+position.coords.latitude+"&long="+position.coords.longitude+"&datum=MSL&numberOfDays=1&apikey=afFMX6LgUIJ8axZZEVvmJVbOGo3gvtxa";
+
+fetch(url)
+  .then(function(response) {
+    alert (response.text());
+  }
 
 }
 </script>
