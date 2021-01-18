@@ -49,36 +49,21 @@
  
 </body>
  <script>
-  /*
-success=(position)=>{
-coords = position.coords;
-   alert(coords.longitude);
-       // astromath.longitude = astromath.radians(coords.longitude); //longitude of observer in degrees East
-      //  astromath.latitude = astromath.radians(coords.latitude); //latitude of observer in degrees
-    //  alert(astromath.longitude)
- }
-error=()=>{
-alert(“error”)
-}
-*/
- getLocation = () => {
-alert("getlocation");
- /*   if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((success,error) => {
-        
-      })
-    } else {
-      //astromath.longitude = astromath.radians(174.76); //longitude of observer in Auckland in degrees East
-     // astromath.latitude = astromath.radians(-36.8485); //latitude of observer  in Auckland  in degrees
-      alert(“no geolocation”)
-    }
-*/
+  var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
   }
- 
-      document.getElementById("buttonTrainLeftFast").addEventListener("click", () => {
-        getLocation()
 }
-)
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude; 
+}
+     // document.getElementById("buttonTrainLeftFast").addEventListener("click", () => {
+        //getLocation()})
     
   </script>
 </html>
