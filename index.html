@@ -31,9 +31,8 @@ function showTide(position) {
 fetch(url)
   .then(function(response) {
     alert (response.text())
-
-  }
-)
+  })
+.then(body => alert(body))
 }
 
 </script>
