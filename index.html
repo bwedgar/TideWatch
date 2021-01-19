@@ -21,9 +21,9 @@
 <meta http-equiv="refresh" content="600">
  
 </head>
-<body style="background-color:black;color:red;font-family:courier;font-size:60px;text-align:center;"> 
+<body style="background-color:black;color:red;font-family:courier;font-size:40px;text-align:center;"> 
 <div style="font-size:350px;border: 2px solid red;border-radius: 100px;margin:auto;width:80%">T</div>
-<div>TideWatch from <a href="bwedgar.github.io"></div>
+<div>TideWatch from <a href="bwedgar.github.io">bwedgar</a></div>
 <br>
 <span id="demo"></span>
 
@@ -64,7 +64,7 @@ v= (val.value>0)?"High":"Low"
 elapsed= ((Date.parse(val.time)-Date.now())/1000/60/60)
 unit=(elapsed<1)?"hour":"hours"
 if (elapsed>0) {
-alert(elapsed+" "+showTime(elapsed))
+//alert(elapsed+" "+showTime(elapsed))
 s=v+" tide in<br>"+showTime(elapsed)+" "+unit
 break
 }
