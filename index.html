@@ -1,7 +1,10 @@
 
 <!DOCTYPE html>
-<html>
 
+<html>
+<head>
+<meta http-equiv="refresh" content="600">
+</head>
 <body>
 
 <p style="font-size:300%;" id="demo"></p>
@@ -45,10 +48,11 @@ fetch(url)
 s=""
 vals=JSON.parse(body).values 
 for (val  of vals) {
-v= (val.value>0)?"high":"low"
+v= (val.value>0)?"High":"Low"
 elapsed= ((Date.parse(val.time)-Date.now())/1000/60/60)
+unit=(elapsed<1)?"hour":"hours"
 if (elapsed>0) {
-s=v+" tide in <br>"+showTime(elapsed)+" hours"
+s=v+" tide in <br>"+showTime(elapsed)+" "+unit
 break
 }
 }
@@ -62,7 +66,7 @@ function showTime(time){
   time = time + 1/8
   t=time-Math.floor(time)
   f=(t>.75)?"&frac34;":(t>.5)?"&frac12;":(t>.25)?"&frac14;":""
-  return Math.round(time)+""+f
+  return (Math.round(time)>=1)?Math.round(time):""+""+f
 }
 
 getLocation()
