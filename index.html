@@ -8,8 +8,15 @@
 
 <script>
 var x = document.getElementById("demo");
+var timeNow=Date.now()
+
 
 function getLocation() {
+  //update every 5 minutes
+if (Date.now()-timeNow>1000*60*5) {
+timeNow=Date.now()
+getLocation()
+}
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showTide);
   } else { 
