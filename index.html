@@ -47,6 +47,7 @@ x.innerHTML=s
 }
 
 function showTime(time){
+  time = time + 1/8
   t=time-Math.floor(time)
   f=(t>.75)?"3/4":(t>.5)?"1/2":(t>.25)?"1/4":""
   return Math.round(time)+" "+f
