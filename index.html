@@ -35,7 +35,10 @@ fetch(url)
 //alert(body)
 s=""
 vals=JSON.parse(body).values 
-for (val  of vals) { s=s+" "+(val.value>0)?"high":"low"+" tide in "+(Date.parse(val.time)-Date.now())/1000/60/60}
+for (val  of vals) {
+v= (val.value>0)?"high":"low"
+ s=s+" "+v+" tide in "+(Date.parse(val.time)-Date.now())/1000/60/60
+}
 alert(s)
 //alert((Date.parse(JSON.parse(body).values[0].time)-Date.now())/1000/60/60))
 }
