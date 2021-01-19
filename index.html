@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<meta http-equiv="refresh" content="600">
+
 </head>
 <body>
 
@@ -13,11 +13,7 @@
 var x = document.getElementById("demo");
 var timeNow=Date.now()
 
- var timeout = setTimeout("location.reload(true);",600000);
-  function resetTimeout() {
-    clearTimeout(timeout);
-    timeout = setTimeout("location.reload(true);",600000);
-  }
+ //var timeout = setTimeout("location.reload(true);",600000);
 
 function getLocation() {
   //update every 5 minutes
@@ -39,12 +35,9 @@ function showPosition(position) {
 
 function showTide(position) {
   url="https://api.niwa.co.nz/tides/data?lat="+position.coords.latitude+"&long="+position.coords.longitude+"&datum=MSL&numberOfDays=2&apikey=afFMX6LgUIJ8axZZEVvmJVbOGo3gvtxa";
-
 fetch(url)
   .then(response => response.text())
-//.then(body=>alert(body))
 .then(body => {
-//alert(body)
 s=""
 vals=JSON.parse(body).values 
 for (val  of vals) {
