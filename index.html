@@ -21,9 +21,9 @@
 <meta http-equiv="refresh" content="600">
  
 </head>
-<body style="background-color:black;color:red;font-family:courier;"> 
-
-<p style="font-size:300%;" id="demo"></p>
+<body style="background-color:black;color:red;font-family:courier;font-size:15"> 
+<p style="font-size:70">T</p>
+<p  id="demo"></p>
 
 <script>
 var x = document.getElementById("demo");
@@ -76,7 +76,7 @@ x.innerHTML=s
 function showTime(time){
   //time = time
   t=time-Math.floor(time)
-  f=(t>5/8)?"&frac34;":(t>3/8)?"&frac12;":(t>0)?"&frac14;":""
+  f=(t>5/8)?"&frac34;":(t>3/8)?"&frac12;":(t>1/8)?"&frac14;":""
   return ((Math.floor(time)==0)?"":Math.floor(time))+" "+f
 }
 
