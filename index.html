@@ -48,7 +48,7 @@ v= (val.value>0)?"High":"Low"
 elapsed= ((Date.parse(val.time)-Date.now())/1000/60/60)
 unit=(elapsed<1)?"hour":"hours"
 if (elapsed>0) {
-alert(elapsed+" "+showTime(elapsed))
+//alert(elapsed+" "+showTime(elapsed))
 s=v+" tide in <br>"+showTime(elapsed)+" "+unit
 break
 }
