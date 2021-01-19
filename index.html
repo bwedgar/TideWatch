@@ -32,6 +32,7 @@ fetch(url)
   .then(response => response.text())
 //.then(body=>alert(body))
 .then(body => {
+alert(body)
 s=""
 values=JSON.parse(body).values 
 for (value of values) { s=s+" "+(Date.parse(value.time)-Date.now())/1000/60/60}
