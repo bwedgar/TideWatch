@@ -77,7 +77,7 @@ function showTime(time){
   //time = time
   t=time-Math.floor(time)
   f=(t>.75)?"&frac34;":(t>.5)?"&frac12;":(t>.25)?"&frac14;":""
-  return (Math.floor(time)==0)?"":Math.floor(time)+" "+f
+  return ((Math.floor(time)==0)?"":Math.floor(time))+" "+f
 }
 
 getLocation()
