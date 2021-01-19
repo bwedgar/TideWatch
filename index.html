@@ -34,9 +34,9 @@ s=""
 vals=JSON.parse(body).values 
 for (val  of vals) {
 v= (val.value>0)?"high":"low"
-elapsed= Math.round((Date.parse(val.time)-Date.now())/1000/60/60)
+elapsed= ((Date.parse(val.time)-Date.now())/1000/60/60)
 if (elapsed>0) {
-s=v+" tide in "+elapsed+" hours\n"
+s=v+" tide in "+showTime(elapsed)+" hours\n"
 break
 }
 }
@@ -45,6 +45,13 @@ x.innerHTML=s
 }
 )
 }
+
+function showTime(time){
+  t=time-Math.floor(time)
+  f=(t>.75)?"3/4":(t>.5)?"1/2":(t>.25)?"1/4":""
+  return Math.round(time)+" "+f
+}
+
 getLocation()
 </script>
 
