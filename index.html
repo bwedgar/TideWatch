@@ -63,7 +63,7 @@ elapsed= ((Date.parse(val.time)-Date.now())/1000/60/60)
 unit=(elapsed<1)?"hour":"hours"
 if (elapsed>0) {
 alert(elapsed+" "+showTime(elapsed))
-s=v+" tide in <br>"+showTime(elapsed)+" "+unit
+s=v+" tide <br>"+showTime(elapsed)+" "+unit
 break
 }
 }
@@ -76,8 +76,8 @@ x.innerHTML=s
 function showTime(time){
   //time = time
   t=time-Math.floor(time)
-  f=(t>.75)?"&frac34;":(t>.5)?"&frac12;":(t>.25)?"&frac14;":""
-  return ((Math.floor(time)==0)?"":Math.floor(time))+" "+f
+  f=(t>5/8)?"&frac34;":(t>3/8)?"&frac12;":(t>1/8)?"&frac14;":""
+  return ((Math.floor(time)==0)?"now":" in "+Math.floor(time))+" "+f
 }
 
 getLocation()
