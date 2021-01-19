@@ -5,7 +5,7 @@
 
 <p>Click the button to get your coordinates.</p>
 
-<button onclick="getLocation()">6</button>
+<button onclick="getLocation()">7</button>
 
 <p id="demo"></p>
 
@@ -31,7 +31,7 @@ function showTide(position) {
 fetch(url)
   .then(response => response.text())
 //.then(body=>alert(body))
-.then(body => alert(Date.parse(JSON.parse(body).values[0].time))-Date.now())
+.then(body => alert(Date.parse(JSON.parse(body).values[0].time)-Date.now()))
 }
 
 </script>
