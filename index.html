@@ -37,7 +37,9 @@ s=""
 vals=JSON.parse(body).values 
 for (val  of vals) {
 v= (val.value>0)?"high":"low"
- s=s+" "+v+" tide in "+Math.round((Date.parse(val.time)-Date.now())/1000/60/60)+" hours\n"
+elapsed= Math.round((Date.parse(val.time)-Date.now())/1000/60/60)
+if (elapsed>0) s=v+" tide in "+elapsed+" hours\n"
+break
 }
 alert(s)
 //alert((Date.parse(JSON.parse(body).values[0].time)-Date.now())/1000/60/60))
