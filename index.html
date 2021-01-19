@@ -43,7 +43,7 @@ for (val  of vals) {
 v= (val.value>0)?"high":"low"
 elapsed= ((Date.parse(val.time)-Date.now())/1000/60/60)
 if (elapsed>0) {
-s=v+" tide in "+showTime(elapsed)+" hours\n"
+s=v+" tide in <br>"+showTime(elapsed)+" hours"
 break
 }
 }
