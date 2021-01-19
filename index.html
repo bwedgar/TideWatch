@@ -5,7 +5,7 @@
 
 <p>Click the button to get your coordinates.</p>
 
-<button onclick="getLocation()">4</button>
+<button onclick="getLocation()">t4</button>
 
 <p id="demo"></p>
 
@@ -34,8 +34,8 @@ fetch(url)
 .then(body => {
 //alert(body)
 s=""
-values=JSON.parse(body).values 
-for (value of values) { s=s+" "+(value.value>0)?"high","low"+" tide in "+(Date.parse(value.time)-Date.now())/1000/60/60}
+vals=JSON.parse(body).values 
+for (val  of vals) { s=s+" "+(val.value>0)?"high":"low"+" tide in "+(Date.parse(val.time)-Date.now())/1000/60/60}
 alert(s)
 //alert((Date.parse(JSON.parse(body).values[0].time)-Date.now())/1000/60/60))
 }
