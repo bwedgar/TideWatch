@@ -59,7 +59,7 @@ function showTime(time){
   time = time + 1/8
   t=time-Math.floor(time)
   f=(t>.75)?"&frac34;":(t>.5)?"&frac12;":(t>.25)?"&frac14;":""
-  return (Math.round(time)>=1)?Math.round(time):""+""+f
+  return (Math.round(time)>=1)?Math.round(time):" "+" "+f
 }
 
 getLocation()
