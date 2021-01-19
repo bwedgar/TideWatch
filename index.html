@@ -38,6 +38,7 @@ function showTide(position) {
 fetch(url)
   .then(response => response.text())
 .then(body => {
+alert(body)
 s=""
 vals=JSON.parse(body).values 
 for (val  of vals) {
