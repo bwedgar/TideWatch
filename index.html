@@ -34,11 +34,6 @@ var timeNow=Date.now()
  var timeout = setTimeout("location.reload(true);",60000);
 
 function getLocation() {
-  //update every 5 minutes
-//if (Date.now()-timeNow>1000*60*5) {
-//timeNow=Date.now()
-//getLocation()
-//}
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showTide);
   } else { 
@@ -66,6 +61,7 @@ unit=(elapsed<1)?"hour":"hours"
 if (elapsed>0) {
 //alert(elapsed+" "+showTime(elapsed))
 s=v+" tide in<br>"+showTime(elapsed)+" "+unit
+s=s.replace("in hour","now")
 break
 }
 }
